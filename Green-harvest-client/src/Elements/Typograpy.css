@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@400;700&family=Kalam:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+
+/* ================= Banner ================= */
+
+.typography-banner {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.typography-banner .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.typography-banner .content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typography-banner .content h1 {
+  color: #fff;
+  font-size: 55px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+/* ================= Main Section ================= */
+
+.typography-section {
+  width: 90%;
+  margin: 70px auto;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 50px;
+}
+
+/* Left */
+
+.heading-block {
+  margin-bottom: 60px;
+}
+
+.heading-block p {
+  margin-top: 18px;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.9;
+  width: 92%;
+}
+
+/* Typography Headings */
+
+.heading-block h1 {
+  font-size: 72px;
+  font-weight: 800;
+  color: #111;
+}
+
+.heading-block h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111;
+}
+
+.heading-block h3 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #111;
+}
+
+.heading-block h4 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+}
+
+.heading-block h5 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+}
+
+.heading-block h6 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Right */
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.sidebar-box {
+  border-left: 1px solid #ddd;
+  padding-left: 25px;
+}
+
+.title {
+  color: #777;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-size: 58px;
+  font-weight: 400;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.kalam {
+  font-family: "Kalam", cursive;
+  font-size: 34px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 38px);
+  gap: 8px;
+}
+
+.color {
+  width: 38px;
+  height: 38px;
+}
+
+.blue {
+  background: #276ef1;
+}
+
+.gray {
+  background: #757575;
+}
+
+.black {
+  background: #1b1b1b;
+}
+
+.darkgray {
+  background: #8b8b8b;
+}
+
+.light1 {
+  background: #f0f0f0;
+}
+
+.light2 {
+  background: #dcdcdc;
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 992px) {
+  .typography-section {
+    grid-template-columns: 1fr;
+  }
+
+  .heading-block p {
+    width: 100%;
+  }
+
+  .heading-block h1 {
+    font-size: 55px;
+  }
+
+  .heading-block h2 {
+    font-size: 40px;
+  }
+
+  .heading-block h3 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .typography-banner {
+    height: 250px;
+  }
+
+  .typography-banner .content h1 {
+    font-size: 40px;
+  }
+
+  .typography-section {
+    width: 95%;
+  }
+
+  .heading-block h1 {
+    font-size: 42px;
+  }
+
+  .heading-block h2 {
+    font-size: 34px;
+  }
+
+  .heading-block h3 {
+    font-size: 28px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ================= HTML ELEMENTS ================= */
+
+.html-elements{
+    width:90%;
+    margin:80px auto;
+}
+
+.html-text h2,
+.list-section h2,
+.blockquote-section h2{
+    font-size:48px;
+    font-weight:700;
+    letter-spacing:2px;
+    color:#111;
+    margin-bottom:30px;
+}
+
+.html-text p{
+    color:#666;
+    font-size:16px;
+    line-height:2;
+}
+
+.html-text strong{
+    font-weight:700;
+    color:#111;
+}
+
+.html-text mark{
+    background:#7fbf5f;
+    color:#fff;
+    padding:2px 6px;
+}
+
+.html-text del{
+    color:#777;
+    margin-left:4px;
+}
+
+.html-text u{
+    color:#8b6c3d;
+    margin-left:4px;
+}
+
+.html-text a{
+    color:#84a44a;
+    text-decoration:none;
+    margin-left:5px;
+}
+
+.html-text a:hover{
+    text-decoration:underline;
+}
+
+/* Lists */
+
+.list-section{
+    margin-top:80px;
+}
+
+.lists{
+    display:flex;
+    gap:120px;
+}
+
+.lists ul,
+.lists ol{
+    color:#666;
+    line-height:2;
+    font-size:17px;
+}
+
+.lists ul{
+    list-style:disc;
+    padding-left:20px;
+}
+
+.lists ol{
+    padding-left:20px;
+}
+
+/* Blockquote */
+
+.blockquote-section{
+    margin-top:80px;
+}
+
+.quote-box{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    max-width:650px;
+}
+
+.quote-icon{
+    font-size:70px;
+    color:#d7e8d2;
+    line-height:1;
+}
+
+.quote-box p{
+    font-size:24px;
+    color:#666;
+    line-height:1.5;
+}
+
+.blockquote-section hr{
+    width:60%;
+    margin:30px 0 20px;
+    border:none;
+    border-top:1px solid #ddd;
+}
+
+.blockquote-section h4{
+    color:#8bb04d;
+    letter-spacing:2px;
+    font-size:15px;
+    font-weight:700;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.lists{
+    flex-direction:column;
+    gap:30px;
+}
+
+.html-text h2,
+.list-section h2,
+.blockquote-section h2{
+    font-size:34px;
+}
+
+.quote-box{
+    flex-direction:column;
+}
+
+.quote-box p{
+    font-size:20px;
+}
+
+.blockquote-section hr{
+    width:100%;
+}
+
+}

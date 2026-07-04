@@ -1,6 +1,13 @@
-import { Container, Carousel, Row, Col, Card } from "react-bootstrap";
+// import { Container, Carousel, Row, Col, Card } from "react-bootstrap";
+// import { Facebook, Twitter, Instagram, Google } from "react-bootstrap-icons";
+// import { Quote } from "react-bootstrap-icons";     
+import Container from "react-bootstrap/Container";
+import Carousel from "react-bootstrap/Carousel";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import { Facebook, Twitter, Instagram, Google } from "react-bootstrap-icons";
 import { Quote } from "react-bootstrap-icons";
-
 import client1 from "../../assets/about11.jpg";
 import client2 from "../../assets/about10.jpg";
 import client3 from "../../assets/about8.jpg";
