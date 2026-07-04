@@ -1,18 +1,53 @@
+// import Contact from "./Menus/contact/Contact"
+// import Footer from "./Components/Footer/Footer"
+// import About from "./Menus/About/About"
+// import Login from "./Components/Loginpage/Login"
+// import Signup from "./Components/Loginpage/Signup"
+// import { Routes,Route } from "react-router-dom"
+// export default function App() {
+//   return (
+//     <>
+//       <Login/>
+    
+//     <Routes>
+//       <Route path="/login" element={ <Login/> } />
+//       <Route path="/signin" element={ <Signup/> } />
+//       <Route path="/signin" element={ <Contact/> } />
+//       <Route path="/signin" element={<About/> } />
+//       <Route path="/signin" element={<About/> } />
+//     </Routes>
+//     <Footer/>
+    
+    
+//     </>
+//   )
+// }
+
+
+import { Routes, Route } from "react-router-dom";
+
+import Login from "./Components/Loginpage/Login";
+import Signup from "./Components/Loginpage/Signup";
 import Contact from "./Menus/contact/Contact"
+
+
 import Gallery from "./Gallery/Gallery"
 import Typography from "./Elements/Typograpy";
-import Footer from "./Components/Footer/Footer"
+// import Footer from "./Components/Footer/Footer"
 import About from "./Menus/About/About"
+
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
   return (
-    <>
-    <Contact/>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/signin" element={ <Contact/> } />
+       <Contact/>
     <Gallery/>
     <Typography/>
     <About/>
-    <Footer/>
-    </>
+    </Routes>
   );
 }
-
