@@ -1,0 +1,13 @@
+@media (max-width: 576px) {
+  .offcanvas {
+    width: 100% !important;
+  }
+
+  .offcanvas h5 {
+    font-size: 18px;
+  }
+
+  .offcanvas .btn {
+    padding: 6px 12px;
+  }
+}

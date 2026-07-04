@@ -1,7 +1,7 @@
 import { Container, Row, Col, Form, Button, InputGroup } from "react-bootstrap";
 import { Person, Envelope, Telephone, ChatLeftText } from "react-bootstrap-icons";
 import { useState } from "react";
-import axios from 'axios';
+import axios from 'axios'
 
 export default function Contactsec2() {
 
