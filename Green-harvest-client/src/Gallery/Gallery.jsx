@@ -1,19 +1,4 @@
-// import React from 'react'
-// import './Gallery.css'
-// export default function Gallery() {
-//   return (
-    // <section class="hero">
-
-    //     <div class="overlay"></div>
-
-    //     <div class="content">
-    //         <h1>GRID GALLERY</h1>
-    //     </div>
-
-    // </section>
-//   )}
-
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Gallery.css";
 import fruit1 from "../assets/grid-gallery-1.jpg";
 import fruit2 from "../assets/grid-gallery-2.jpg";

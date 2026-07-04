@@ -1,4 +1,3 @@
-import React from "react";
 import "./Typograpy.css";
 import bgImage from "../assets/bg-typo.jpg";
 

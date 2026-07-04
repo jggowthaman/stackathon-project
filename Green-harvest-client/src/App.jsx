@@ -26,22 +26,21 @@
 
 
 import { Routes, Route } from "react-router-dom";
-// import Header from "./Components/Header/Header"
 import Login from "./Components/Loginpage/Login";
 import Signup from "./Components/Loginpage/Signup";
-import Contact from "./Menus/contact/Contact";
+// import Contact from "./Menus/contact/Contact";
+
 // import Home from "./Menus/Home/Home"
 // import Aboutsec1 from "./Menus/About/Aboutsec1";
+import Mainpages from "./Menus/Mainpages";
 
 export default function App() {
   return (
     <Routes>
-      {/* <Header/> */}
    
       <Route path="/" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      {/* <Route path="/home1" element={ <Home/> }/> */}
-      <Route path="/home" element={<Contact />} />
+      <Route path="/home" element={<Mainpages />} />
       {/* <Route path="/about" element={<Aboutsec1 />} /> */}
     </Routes>
   );
