@@ -9,11 +9,11 @@ import {
   InputGroup,
 } from "react-bootstrap";
 import axios from "axios";
-
-import { Link } from "react-bootstrap-icons";
-import Signup from "./Signup";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
+
   const [showPassword, setShowPassword] = useState(false);
 
   const [loginInfo, setLoginInfo] = useState({
@@ -21,7 +21,10 @@ export default function Login() {
     uepassword: "",
   });
 
-  const [err, setErr] = useState({});
+  const [err, setErr] = useState({
+    uemail: "",
+    uepassword: "",
+  });
 
   // Handle Input Change
   const changingdata = (e) => {
@@ -48,7 +51,7 @@ export default function Login() {
     if (!loginInfo.uemail.trim()) {
       temperr.uemail = "Please enter your email";
     } else if (!emailPattern.test(loginInfo.uemail)) {
-      temperr.uemail = "Enter a valid email";
+      temperr.uemail = "Please enter a valid email";
     }
 
     if (!loginInfo.uepassword.trim()) {
@@ -80,6 +83,9 @@ export default function Login() {
       });
 
       setErr({});
+
+      // Navigate to Contact Page
+      navigate("/home");
     } catch (error) {
       console.log(error);
 
@@ -116,7 +122,9 @@ export default function Login() {
                     <Form.Label>Email Address</Form.Label>
 
                     <InputGroup>
-                      <InputGroup.Text>
+                      <InputGroup.Text
+                        className={err.uemail ? "border-danger text-danger" : ""}
+                      >
                         <i className="bi bi-envelope"></i>
                       </InputGroup.Text>
 
@@ -130,9 +138,9 @@ export default function Login() {
                       />
                     </InputGroup>
 
-                    <small className="text-danger">
+                    <Form.Control.Feedback type="invalid">
                       {err.uemail}
-                    </small>
+                    </Form.Control.Feedback>
                   </Form.Group>
 
                   {/* Password */}
@@ -140,7 +148,9 @@ export default function Login() {
                     <Form.Label>Password</Form.Label>
 
                     <InputGroup>
-                      <InputGroup.Text>
+                      <InputGroup.Text
+                        className={err.uepassword ? "border-danger text-danger" : ""}
+                      >
                         <i className="bi bi-lock"></i>
                       </InputGroup.Text>
 
@@ -156,9 +166,7 @@ export default function Login() {
                       <Button
                         type="button"
                         variant="outline-secondary"
-                        onClick={() =>
-                          setShowPassword(!showPassword)
-                        }
+                        onClick={() => setShowPassword(!showPassword)}
                       >
                         <i
                           className={`bi ${
@@ -170,9 +178,9 @@ export default function Login() {
                       </Button>
                     </InputGroup>
 
-                    <small className="text-danger">
+                    <Form.Control.Feedback type="invalid">
                       {err.uepassword}
-                    </small>
+                    </Form.Control.Feedback>
                   </Form.Group>
 
                   {/* Remember Me */}
@@ -205,13 +213,11 @@ export default function Login() {
                   <Button
                     variant="link"
                     className="text-decoration-none fw-bold p-0"
-                    onClick={() => (window.location.href = "/signup")}
+                    onClick={() => navigate("/signup")}
                   >
                     Create Account
                   </Button>
                 </p>
-
-
 
               </Card.Body>
             </Card>

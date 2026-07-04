@@ -28,26 +28,16 @@ import { Routes, Route } from "react-router-dom";
 
 import Login from "./Components/Loginpage/Login";
 import Signup from "./Components/Loginpage/Signup";
-import Contact from "./Menus/contact/Contact"
-
-
-import Gallery from "./Gallery/Gallery"
-import Typography from "./Elements/Typograpy";
-// import Footer from "./Components/Footer/Footer"
-import About from "./Menus/About/About"
-
-import { useNavigate } from "react-router-dom";
+import Contact from "./Menus/contact/Contact";
+// import Aboutsec1 from "./Menus/About/Aboutsec1";
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/signin" element={ <Contact/> } />
-       <Contact/>
-    <Gallery/>
-    <Typography/>
-    <About/>
+      <Route path="/home" element={<Contact />} />
+      {/* <Route path="/about" element={<Aboutsec1 />} /> */}
     </Routes>
   );
 }
